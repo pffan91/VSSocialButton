@@ -41,7 +41,7 @@ Just drag and drop VSSocialButton.swift and VSSocialButton.xib into your project
 
 ## Usage
 
-![](https://dl.dropbox.com/s/63z3s2n0obfqe6c/img1.png)
+![](https://dl.dropbox.com/s/izdcyj8mf1jwva7/usage.gif)
 
 ## Author
 
