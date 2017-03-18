@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'VSSocialButton_Example' do
+  pod 'VSSocialButton', :path => '../'
+
+  target 'VSSocialButton_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
