@@ -1,0 +1,6 @@
+framework module VSSocialButton {
+  umbrella header "VSSocialButton-umbrella.h"
+
+  export *
+  module * { export * }
+}

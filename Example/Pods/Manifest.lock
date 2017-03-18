@@ -1,0 +1,16 @@
+PODS:
+  - VSSocialButton (1.0)
+
+DEPENDENCIES:
+  - VSSocialButton (from `../`)
+
+EXTERNAL SOURCES:
+  VSSocialButton:
+    :path: ../
+
+SPEC CHECKSUMS:
+  VSSocialButton: c04a4f9bb4ad40fb2b958ee05371079ca6becc35
+
+PODFILE CHECKSUM: 30b8d5e5fffdcb4028f091a663c1a43ac7282382
+
+COCOAPODS: 1.2.0

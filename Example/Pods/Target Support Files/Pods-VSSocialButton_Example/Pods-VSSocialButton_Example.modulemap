@@ -1,0 +1,6 @@
+framework module Pods_VSSocialButton_Example {
+  umbrella header "Pods-VSSocialButton_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'VSSocialButton'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of VSSocialButton.'
+  s.version          = '1.0'
+  s.summary          = 'VSSocialButton - button with left icon image and centered label.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,15 +18,22 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+                   Easily create social buttons in storyboards or with code.
+				   Included incpectables:
+                   * Network image - set social network image (Facebook, Twitter etc.);
+                   * Button title - set button title;
+                   * Button background color - set button background color;
+                   * Label text color - set button label text color;
+                   * Button corner radius - set button corner radius;
+                   * Should animate social network image on press - animate netwrok image alpha on button press;
                        DESC
 
-  s.homepage         = 'https://github.com/developer-semenchenko/VSSocialButton'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/pffan91/VSSocialButton/'
+  s.screenshots     = 'https://dl.dropbox.com/s/63z3s2n0obfqe6c/img1.png', 'https://dl.dropbox.com/s/jjj2wj3ebwsh7zu/img2.png'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'developer-semenchenko' => 'vsemenchenko@360lab.com' }
-  s.source           = { :git => 'https://github.com/developer-semenchenko/VSSocialButton.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'Vladyslav Semenchenko' => 'developer.semenchenko@gmail.com' }
+  s.source           = { :git => 'https://github.com/pffan91/VSSocialButton/.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/V_Semenchenko'
 
   s.ios.deployment_target = '8.0'
 
@@ -37,6 +44,5 @@ TODO: Add long description of the pod here.
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = 'UIKit'
 end

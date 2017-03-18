@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VSSocialButton" customModule="VSSocialButton" customModuleProvider="target">
+            <connections>
+                <outlet property="ivSocialNetworkIcon" destination="Asw-Em-vHU" id="Vie-lM-8WR"/>
+                <outlet property="lblButtonTitle" destination="1Iq-bj-MGL" id="Iqa-EK-iR0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="9Gr-p3-Cla">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Yw-Wx-u7s">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <connections>
+                        <action selector="buttonTouchCancel:" destination="-1" eventType="touchCancel" id="hoQ-a9-aLT"/>
+                        <action selector="buttonTouchDown:" destination="-1" eventType="touchDown" id="HgZ-Sn-ylQ"/>
+                        <action selector="buttonTouchDownRepeat:" destination="-1" eventType="touchDownRepeat" id="35z-BX-5zQ"/>
+                        <action selector="buttonTouchUpInside:" destination="-1" eventType="touchUpInside" id="JDT-0c-uIu"/>
+                        <action selector="buttonTouchUpOutside:" destination="-1" eventType="touchUpOutside" id="QfM-Fh-UyO"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Asw-Em-vHU">
+                    <rect key="frame" x="8" y="308" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Cuj-FJ-m5V"/>
+                        <constraint firstAttribute="width" constant="50" id="LV3-Vr-4b6"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Button" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Iq-bj-MGL">
+                    <rect key="frame" x="66" y="323" width="293" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="0Yw-Wx-u7s" firstAttribute="top" secondItem="9Gr-p3-Cla" secondAttribute="top" id="Ryg-FI-qPa"/>
+                <constraint firstItem="0Yw-Wx-u7s" firstAttribute="leading" secondItem="9Gr-p3-Cla" secondAttribute="leading" id="Stp-g1-55H"/>
+                <constraint firstAttribute="trailing" secondItem="1Iq-bj-MGL" secondAttribute="trailing" constant="16" id="Z3u-Bs-dJW"/>
+                <constraint firstAttribute="trailing" secondItem="0Yw-Wx-u7s" secondAttribute="trailing" id="bEJ-D4-aBy"/>
+                <constraint firstItem="1Iq-bj-MGL" firstAttribute="centerY" secondItem="9Gr-p3-Cla" secondAttribute="centerY" id="bL1-pf-YcH"/>
+                <constraint firstAttribute="bottom" secondItem="0Yw-Wx-u7s" secondAttribute="bottom" id="bZD-Q2-Q54"/>
+                <constraint firstItem="Asw-Em-vHU" firstAttribute="leading" secondItem="9Gr-p3-Cla" secondAttribute="leading" constant="8" id="c7z-ay-4se"/>
+                <constraint firstItem="1Iq-bj-MGL" firstAttribute="leading" secondItem="Asw-Em-vHU" secondAttribute="trailing" constant="8" id="ozB-hd-tb9"/>
+                <constraint firstItem="Asw-Em-vHU" firstAttribute="centerY" secondItem="9Gr-p3-Cla" secondAttribute="centerY" id="v7g-Jc-spM"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="4.5" y="68.5"/>
+        </view>
+    </objects>
+</document>

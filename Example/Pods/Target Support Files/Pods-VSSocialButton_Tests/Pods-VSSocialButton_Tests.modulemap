@@ -1,0 +1,6 @@
+framework module Pods_VSSocialButton_Tests {
+  umbrella header "Pods-VSSocialButton_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
