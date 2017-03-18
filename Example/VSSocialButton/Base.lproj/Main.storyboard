@@ -73,7 +73,7 @@
                                     <userDefinedRuntimeAttribute type="image" keyPath="socialNetworkImage" value="TWLogo"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonTitle" value="Login with Twitter"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="buttonBackgroundColor">
-                                        <color key="value" red="0.0" green="0.81353081599999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.0" green="0.59217664930000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="labelTextColor">
                                         <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -24,11 +24,13 @@ Included incpectables:
 * Should animate social network image on press - animate netwrok image alpha on button press;
 
 ## Requirements
--- iOS 8.0 and up
+
+- iOS 8.0 and up
 
 ## Installation
 
 ### CocoaPods
+
 VSSocialButton is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
@@ -37,6 +39,7 @@ pod "VSSocialButton"
 ```
 
 ### Manual
+
 Just drag and drop VSSocialButton.swift and VSSocialButton.xib into your project and you are in.
 
 ## Usage
@@ -45,14 +48,17 @@ Just drag and drop VSSocialButton.swift and VSSocialButton.xib into your project
 
 ## Author
 
--- Vladyslav Semnchenko
+- Vladyslav Semnchenko
 
 ## Contact me
 
-Feel free to contact me via email 
--- developer.semenchenko@gmail.com
+Feel free to contact me via email
+
+- developer.semenchenko@gmail.com
+
 or via Twitter:
--- @V_Semenchenko
+
+- @V_Semenchenko
 
 ## License
 
