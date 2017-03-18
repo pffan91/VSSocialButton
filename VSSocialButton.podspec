@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   s.screenshots     = 'https://dl.dropbox.com/s/63z3s2n0obfqe6c/img1.png', 'https://dl.dropbox.com/s/jjj2wj3ebwsh7zu/img2.png'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Vladyslav Semenchenko' => 'developer.semenchenko@gmail.com' }
-  s.source           = { :git => 'https://github.com/pffan91/VSSocialButton/.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/pffan91/VSSocialButton.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/V_Semenchenko'
 
   s.ios.deployment_target = '8.0'
