@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="maK-6R-fbw">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="VSSocialButton_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstViewController" id="vXZ-lx-hvc" customClass="ViewController" customModule="VSSocialButton_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9t4-rR-Y4L" customClass="VSSocialButton" customModule="VSSocialButton">
-                                <rect key="frame" x="16" y="36" width="382" height="48"/>
+                                <rect key="frame" x="16" y="80" width="382" height="48"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="kof-5Z-fWW"/>
@@ -33,20 +33,25 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="buttonBackgroundColor">
                                         <color key="value" red="0.14901960780000001" green="0.2666666667" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="labelTextColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="buttonCornerRadius">
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAnimateSocialNetworkImageOnPress" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="buttonLabelFontSize">
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldSlideAnimateButtonPress" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonTitleColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="buttonTitleFontSize">
                                         <real key="value" value="18"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonTitleFontName" value="System"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didPressFacebookButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ys7-RS-90m"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wq9-gP-wRJ" customClass="VSSocialButton" customModule="VSSocialButton">
-                                <rect key="frame" x="16" y="100" width="382" height="48"/>
+                                <rect key="frame" x="16" y="144" width="382" height="48"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="czf-Xq-NDQ"/>
@@ -57,17 +62,28 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="buttonBackgroundColor">
                                         <color key="value" red="0.29803921570000003" green="0.45882352939999999" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="labelTextColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="buttonCornerRadius">
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAnimateSocialNetworkImageOnPress" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldSlideAnimateButtonPress" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonTitleColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="buttonTitleFontSize">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonTitleFontName" value="Avenir"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="animationButtonPressDelay">
+                                        <integer key="value" value="300"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didPressVKontakteButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="AyS-xQ-O3M"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ao7-8R-jlO" customClass="VSSocialButton" customModule="VSSocialButton">
-                                <rect key="frame" x="16" y="164" width="382" height="48"/>
+                                <rect key="frame" x="16" y="208" width="382" height="48"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="R3T-40-bnF"/>
@@ -78,14 +94,18 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="buttonBackgroundColor">
                                         <color key="value" red="0.0" green="0.59217664930000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="labelTextColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="buttonCornerRadius">
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAnimateSocialNetworkImageOnPress" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldSlideAnimateButtonPress" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonTitleColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didPressTwitterButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qMa-bn-my2"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -101,8 +121,81 @@
                             <constraint firstItem="Ao7-8R-jlO" firstAttribute="top" secondItem="Wq9-gP-wRJ" secondAttribute="bottom" constant="16" id="ujs-UH-kbt"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="eme-kh-Gld"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044.9275362318842" y="136.95652173913044"/>
+        </scene>
+        <!--Twitter-->
+        <scene sceneID="gtw-dU-cV1">
+            <objects>
+                <viewController storyboardIdentifier="TwitterViewController" title="Twitter" id="5ly-fu-dxo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XoG-gr-Ebo"/>
+                        <viewControllerLayoutGuide type="bottom" id="Icq-RB-ai2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="J1x-1n-4Nz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.59217664930000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0vG-MM-hOc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3145" y="137"/>
+        </scene>
+        <!--Facebook-->
+        <scene sceneID="h4m-GJ-shm">
+            <objects>
+                <viewController storyboardIdentifier="FacebookViewController" title="Facebook" id="mcV-TV-epe" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6mH-ns-nEp"/>
+                        <viewControllerLayoutGuide type="bottom" id="NQa-Ox-IAF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BIJ-J9-QW1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.14901960780000001" green="0.2666666667" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vxC-O3-ymb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1752" y="137"/>
+        </scene>
+        <!--Vkontakte-->
+        <scene sceneID="Ep8-1I-XXx">
+            <objects>
+                <viewController storyboardIdentifier="VKontakteViewController" title="Vkontakte" id="yti-BH-Qxo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3vz-G2-Spd"/>
+                        <viewControllerLayoutGuide type="bottom" id="LhB-3q-vI6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4XI-5M-XLa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.29803921570000003" green="0.45882352939999999" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wgb-hZ-4d8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2454" y="137"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="C4I-zf-2j9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="maK-6R-fbw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JF9-gL-s1u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="ggY-ti-S2S"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eps-Nw-ool" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="136.95652173913044"/>
         </scene>

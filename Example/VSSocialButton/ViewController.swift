@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let sb: UIStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
+    
+    // MARK: - ViewController Life Circle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,5 +23,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    // MARK: - User Interaction
+    @IBAction func didPressFacebookButton(_ sender: Any) {
+        self.navigationController?.pushViewController(sb.instantiateViewController(withIdentifier: "FacebookViewController"), animated: true)
+    }
+    
+    @IBAction func didPressVKontakteButton(_ sender: Any) {
+        self.navigationController?.pushViewController(sb.instantiateViewController(withIdentifier: "VKontakteViewController"), animated: true)
+    }
+    
+    @IBAction func didPressTwitterButton(_ sender: Any) {
+        self.navigationController?.pushViewController(sb.instantiateViewController(withIdentifier: "TwitterViewController"), animated: true)
+    }
 }
 
