@@ -40,6 +40,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAnimateSocialNetworkImageOnPress" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="buttonLabelFontSize">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wq9-gP-wRJ" customClass="VSSocialButton" customModule="VSSocialButton">

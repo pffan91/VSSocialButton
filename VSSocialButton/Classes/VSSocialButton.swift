@@ -62,6 +62,24 @@ import UIKit
         }
     }
     
+    @IBInspectable var buttonLabelFontSize: CGFloat {
+        get {
+            return lblButtonTitle.font.pointSize
+        }
+        set(fontSize) {
+            lblButtonTitle.font = UIFont.init(name: lblButtonTitle.font.fontName, size: fontSize)
+        }
+    }
+    
+    @IBInspectable var buttonLabelFontName: String {
+        get {
+            return lblButtonTitle.font.fontName
+        }
+        set(fontName) {
+            lblButtonTitle.font = UIFont.init(name: fontName, size: lblButtonTitle.font.pointSize)
+        }
+    }
+    
     @IBInspectable var shouldAnimateSocialNetworkImageOnPress: Bool {
         get {
             return animateSocialNetworkImageOnPress
@@ -71,7 +89,7 @@ import UIKit
         }
     }
     
-    // MARK: - Init
+    // MARK: - View Life Circle
     override init(frame: CGRect) {
         super.init(frame: frame)
         xibSetup()
