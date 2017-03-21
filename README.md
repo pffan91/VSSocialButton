@@ -20,8 +20,13 @@ Included incpectables:
 * Button title - set button title;
 * Button background color - set button background color;
 * Label text color - set button label text color;
+* Font size - set font size for button label;
+* Font name - set font name for button label;
 * Button corner radius - set button corner radius;
-* Should animate social network image on press - animate netwrok image alpha on button press;
+* Should animate social network image on press - animate network image alpha on button press;
+* Should animate "slide" on press - animate "slide" on button press, please see example:
+
+![](https://dl.dropbox.com/s/e2mi2n3zbh5p0ll/button_animation_1.gif)
 
 ## Requirements
 
