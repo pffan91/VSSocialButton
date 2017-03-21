@@ -6,10 +6,10 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   VSSocialButton:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  VSSocialButton: c04a4f9bb4ad40fb2b958ee05371079ca6becc35
+  VSSocialButton: f1d6ff9851d04672a15f4ea8c90d5bebbf2215e6
 
 PODFILE CHECKSUM: 30b8d5e5fffdcb4028f091a663c1a43ac7282382
 

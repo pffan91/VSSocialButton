@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		062261CDA5D26B4B72048AD1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		062261CDA5D26B4B72048AD1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		2E5D838FA963129183B94DE5 /* Pods_VSSocialButton_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VSSocialButton_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* VSSocialButton_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VSSocialButton_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,12 +41,12 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		76098E6BF7159710F948B937 /* Pods-VSSocialButton_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VSSocialButton_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VSSocialButton_Example/Pods-VSSocialButton_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		82EB00AFD420782C4C8576E3 /* VSSocialButton.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = VSSocialButton.podspec; path = ../VSSocialButton.podspec; sourceTree = "<group>"; };
+		82EB00AFD420782C4C8576E3 /* VSSocialButton.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = VSSocialButton.podspec; path = ../VSSocialButton.podspec; sourceTree = "<group>"; };
 		8FDC7E3547727D0770340A8C /* Pods-VSSocialButton_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VSSocialButton_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VSSocialButton_Tests/Pods-VSSocialButton_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9060B7C01C74C381375A9631 /* Pods-VSSocialButton_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VSSocialButton_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VSSocialButton_Tests/Pods-VSSocialButton_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		98DD84473A65C4D3B65CF938 /* Pods_VSSocialButton_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VSSocialButton_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F1CDD33D9EADA1D519500E5 /* Pods-VSSocialButton_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VSSocialButton_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-VSSocialButton_Example/Pods-VSSocialButton_Example.release.xcconfig"; sourceTree = "<group>"; };
-		FBCA1F66E02395A6A281D1A6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		FBCA1F66E02395A6A281D1A6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -502,6 +502,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -516,6 +517,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

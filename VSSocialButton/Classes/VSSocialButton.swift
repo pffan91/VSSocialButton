@@ -8,11 +8,11 @@
 
 import UIKit
 
-@IBDesignable class VSSocialButton: UIControl {
+@IBDesignable
+class VSSocialButton: UIButton {
     
     // MARK: - Variables
-    var view: UIView!
-    var animateSocialNetworkImageOnPress: Bool = false
+    final var view: UIView!
     @IBOutlet weak var ivSocialNetworkIcon: UIImageView!
     @IBOutlet weak var lblButtonTitle: UILabel!
 
@@ -26,30 +26,12 @@ import UIKit
         }
     }
     
-    @IBInspectable var buttonTitle: String? {
-        get {
-            return lblButtonTitle.text
-        }
-        set(text) {
-            lblButtonTitle.text = text
-        }
-    }
-    
     @IBInspectable var buttonBackgroundColor: UIColor? {
         get {
             return view.backgroundColor
         }
         set(color) {
             view.backgroundColor = color
-        }
-    }
-    
-    @IBInspectable var labelTextColor: UIColor? {
-        get {
-            return lblButtonTitle.textColor
-        }
-        set(color) {
-            lblButtonTitle.textColor = color
         }
     }
     
@@ -62,7 +44,26 @@ import UIKit
         }
     }
     
-    @IBInspectable var buttonLabelFontSize: CGFloat {
+    @IBInspectable var buttonTitle: String? {
+        get {
+            return lblButtonTitle.text
+        }
+        set(text) {
+            lblButtonTitle.text = text
+        }
+    }
+    
+    @IBInspectable var buttonTitleColor: UIColor? {
+        get {
+            return lblButtonTitle.textColor
+        }
+        set(color) {
+            lblButtonTitle.textColor = color
+        }
+        
+    }
+    
+    @IBInspectable var buttonTitleFontSize: CGFloat {
         get {
             return lblButtonTitle.font.pointSize
         }
@@ -71,7 +72,7 @@ import UIKit
         }
     }
     
-    @IBInspectable var buttonLabelFontName: String {
+    @IBInspectable var buttonTitleFontName: String {
         get {
             return lblButtonTitle.font.fontName
         }
@@ -80,14 +81,11 @@ import UIKit
         }
     }
     
-    @IBInspectable var shouldAnimateSocialNetworkImageOnPress: Bool {
-        get {
-            return animateSocialNetworkImageOnPress
-        }
-        set(animate) {
-            animateSocialNetworkImageOnPress = animate
-        }
-    }
+    @IBInspectable var animationButtonPressDelay: Int = 0
+    
+    @IBInspectable var shouldAnimateSocialNetworkImageOnPress: Bool = false
+    
+    @IBInspectable var shouldSlideAnimateButtonPress: Bool = false
     
     // MARK: - View Life Circle
     override init(frame: CGRect) {
@@ -101,14 +99,14 @@ import UIKit
     }
     
     // MARK: - Xib Helper
-    func xibSetup() {
+    final func xibSetup() {
         view = loadViewFromNib()
         view.frame = bounds
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         addSubview(view)
     }
     
-    func loadViewFromNib() -> UIView {
+    final func loadViewFromNib() -> UIView {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "VSSocialButton", bundle: bundle)
         let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
@@ -117,48 +115,55 @@ import UIKit
     
     // MARK: - User Interaction
     @IBAction func buttonTouchDown(_ sender: Any) {
-        self.lblButtonTitle.alpha = 0.2
-        
-        if animateSocialNetworkImageOnPress {
-            self.ivSocialNetworkIcon.alpha = 0.2;
-        }
+        animateDown()
     }
     
     @IBAction func buttonTouchDownRepeat(_ sender: Any) {
-        self.lblButtonTitle.alpha = 0.2
-        
-        if animateSocialNetworkImageOnPress {
-            self.ivSocialNetworkIcon.alpha = 0.2;
-        }
+        animateDown()
     }
     
     @IBAction func buttonTouchUpInside(_ sender: Any) {
-        self.sendActions(for: .touchUpInside)
+        if shouldSlideAnimateButtonPress {
+            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(animationButtonPressDelay)) {
+                self.sendActions(for: .touchUpInside)
+            }
+        } else {
+            self.sendActions(for: .touchUpInside)
+        }
+
+        animateUp()
         
-        UIView.animate(withDuration: 0.25) {
-            self.lblButtonTitle.alpha = 1.0
-            
-            if self.animateSocialNetworkImageOnPress {
-                self.ivSocialNetworkIcon.alpha = 1.0;
+        if shouldSlideAnimateButtonPress {
+            let originalXPos: CGFloat = self.frame.origin.x
+            UIView.animate(withDuration: 1.0, animations: {
+                self.frame = CGRect(x: self.frame.origin.x - 1000, y: self.frame.origin.y, width: self.frame.size.width, height: self.frame.size.height)
+            }) { (finished) in
+                self.frame = CGRect(x: originalXPos, y: self.frame.origin.y, width: self.frame.size.width, height: self.frame.size.height)
             }
         }
     }
     
     @IBAction func buttonTouchCancel(_ sender: Any) {
-        UIView.animate(withDuration: 0.25) {
-            self.lblButtonTitle.alpha = 1.0
-            
-            if self.animateSocialNetworkImageOnPress {
-                self.ivSocialNetworkIcon.alpha = 1.0;
-            }
-        }
+        animateUp()
     }
     
     @IBAction func buttonTouchUpOutside(_ sender: Any) {
+        animateUp()
+    }
+    
+    // MARK: - Private
+    func animateDown() {
+        self.lblButtonTitle.alpha = 0.2
+        
+        if shouldAnimateSocialNetworkImageOnPress {
+            self.ivSocialNetworkIcon.alpha = 0.2;
+        }
+    }
+    
+    func animateUp() {
         UIView.animate(withDuration: 0.25) {
             self.lblButtonTitle.alpha = 1.0
-            
-            if self.animateSocialNetworkImageOnPress {
+            if self.shouldAnimateSocialNetworkImageOnPress {
                 self.ivSocialNetworkIcon.alpha = 1.0;
             }
         }
