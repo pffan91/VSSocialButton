@@ -10,7 +10,7 @@ VSSocialButton - button with left icon image and centered label.
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-![](https://raw.githubusercontent.com/pffan91/VSSocialButton/master/Images/img1.png) ![] (https://raw.githubusercontent.com/pffan91/VSSocialButton/master/Images/img2.png)
+![](https://raw.githubusercontent.com/pffan91/VSSocialButton/master/Images/img1.png) ![](https://raw.githubusercontent.com/pffan91/VSSocialButton/master/Images/img2.png)
 
 ## Description
 
