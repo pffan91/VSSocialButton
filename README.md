@@ -10,7 +10,7 @@ VSSocialButton - button with left icon image and centered label.
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-![](https://dl.dropbox.com/s/63z3s2n0obfqe6c/img1.png)![](https://dl.dropbox.com/s/jjj2wj3ebwsh7zu/img2.png)
+![]()(https://raw.githubusercontent.com/pffan91/VSSocialButton/master/Images/img1.png) ![]() (https://raw.githubusercontent.com/pffan91/VSSocialButton/master/Images/img2.png)
 
 ## Description
 
@@ -26,7 +26,7 @@ Included incpectables:
 * Should animate social network image on press - animate network image alpha on button press;
 * Should animate "slide" on press - animate "slide" on button press, please see example:
 
-![](https://dl.dropbox.com/s/e2mi2n3zbh5p0ll/button_animation_1.gif)
+![](https://raw.githubusercontent.com/pffan91/VSSocialButton/master/Images/button_animation_1.gif)
 
 ## Requirements
 
@@ -49,11 +49,11 @@ Just drag and drop VSSocialButton.swift and VSSocialButton.xib into your project
 
 ## Usage
 
-![](https://dl.dropbox.com/s/izdcyj8mf1jwva7/usage.gif)
+![](https://raw.githubusercontent.com/pffan91/VSSocialButton/master/Images/usage.gif)
 
 ## Author
 
-- Vladyslav Semnchenko
+- Vladyslav Semenchenko
 
 ## Contact me
 
