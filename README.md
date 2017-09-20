@@ -10,12 +10,12 @@ VSSocialButton - button with left icon image and centered label.
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-![]()(https://raw.githubusercontent.com/pffan91/VSSocialButton/master/Images/img1.png) ![]() (https://raw.githubusercontent.com/pffan91/VSSocialButton/master/Images/img2.png)
+![](https://raw.githubusercontent.com/pffan91/VSSocialButton/master/Images/img1.png) ![] (https://raw.githubusercontent.com/pffan91/VSSocialButton/master/Images/img2.png)
 
 ## Description
 
 Easily create social buttons in storyboards or with code.
-Included incpectables:
+Included inspectables:
 * Network image - set social network image (Facebook, Twitter etc.);
 * Button title - set button title;
 * Button background color - set button background color;
